@@ -24,7 +24,7 @@ npm install
 
 ### Live Demo:
 
-[Arnowa Selection Test Demo](https://youtu.be/-Dym4ghB854)
+[Arnowa Selection Test Demo](https://arnowa-vivek.herokuapp.com/)
 
 ### Run Project:
 
