@@ -15,6 +15,7 @@
             </div>
         </div>
     </div>
+    <% if(locals.user == undefined){ %> 
     <div class="mt-20 flex justify-center gap-40">
         <button class="bg-slate-600 text-white px-20 py-20 pt-3 pb-3 rounded-md shadow-md">
             <a href="/login"><i class="fas fa-sign-in"></i> Login</a>
@@ -23,4 +24,5 @@
             <i class="fas fa-user-plus"></i> <a href="/register">Register</a>
         </button>
     </div>
+    <% } %> 
 </section>

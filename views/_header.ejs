@@ -4,16 +4,30 @@
             <a href="/">Arnowa</a>
         </h2>
         <nav>
-            <ul class="flex gap-8 text-white">
+            <ul class="flex items-center gap-8 text-white">
                 <li class="<%= active === "home" ? "activeMenu" : '' %>">
                     <a href="/">Home</a>
                 </li>
-                <li class="<%= active === "login" ? "activeMenu" : '' %>">
-                <a href="/login">Login</a>
-                </li>
-                <li class="<%= active === "register" ? "activeMenu" : '' %>">
-                <a href="/register">Register</a>
-                </li>
+                <% if(locals.user == undefined){ %> 
+                    <li class="<%= active === "login" ? "activeMenu" : '' %>">
+                        <a href="/login">Login</a>
+                    </li>
+                    <li class="<%= active === "register" ? "activeMenu" : '' %>">
+                        <a href="/register">Register</a>
+                    </li>
+                <% } %>
+                
+                <% if(locals.user){ %>
+                    <li class="<%= active === "dashboard" ? "activeMenu" : '' %>">
+                        <a href="/users/dashboard">Dashboard</a>
+                    </li>
+
+                    <li>
+                        <form action="/logout" method="post">
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
+                <% } %>  
             </ul>
         </nav>
     </div>

@@ -43,6 +43,10 @@
     @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-10/12
 }
 
+.dashboard-container{
+    @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-10/12
+}
+
 .activeMenu{
     @apply bg-slate-300 px-4 py-1 rounded-md text-black
 }

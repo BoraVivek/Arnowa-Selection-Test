@@ -8,26 +8,26 @@
         </span>
     </div>
 
-    <form action="" class="input-form flex flex-col gap-5">
+    <form action="/users/create-account" class="input-form flex flex-col gap-5" method="post">
         <div class="inputGroup">
             <label for="email">Name</label>
-            <input type="text" name="name" id="name" placeholder="Enter your name">
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
         </div>
         <div class="inputGroup">
             <label for="email">Email</label>
-            <input type="text" name="email" id="email" placeholder="Enter your email">
+            <input type="text" name="email" id="email" placeholder="Enter your email" required>
         </div>
         <div class="inputGroup">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="Enter your password">
+            <input type="password" name="password" id="password" placeholder="Enter your password" required>
         </div>
         <div class="inputGroup">
             <label for="password">Confirm Password</label>
             <input type="password" name="confirm_password" id="confirm_password"
-                placeholder="Enter your confirm password">
+                placeholder="Enter your confirm password" required>
         </div>
         <div class="inputGroup items-center">
-            <input type="submit" value="Login">
+            <input type="submit" value="Register">
         </div>
     </form>
 </div>

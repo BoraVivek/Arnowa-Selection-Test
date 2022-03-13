@@ -5,8 +5,7 @@ const homeController = require("../controllers/homeController");
 router.get("/", homeController.homePage);
 router.get("/login", homeController.login);
 router.get("/register", homeController.register)
-
-
+router.post("/logout", homeController.logout);
 
 
 router.use("/users", require("./users"));

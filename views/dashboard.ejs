@@ -1,0 +1,106 @@
+<section class="dashboard-container">
+    <div class="flex flex-col bg-slate-500 shadow-md text-white rounded-md">
+        <div class="p-5 text-center">
+            Welcome, <b>
+                <%= user.name %>
+            </b>
+        </div>
+        <div class="p-5 bg-slate-600 flex justify-around gap-32">
+            <div class="flex flex-col justify-center items-center gap-10">
+                <canvas id="growthChart"></canvas>
+                <div class="text-2xl">Growth</div>
+
+                <div class="percentage text-green-400 text-5xl font-bold">
+                    <%= (growthChart[0] / 1000)*100 %>%
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-center items-center gap-10">
+                <canvas id="lossChart"></canvas>
+
+                <div class="text-2xl">Loss</div>
+
+                <div class="percentage text-red-400 text-5xl font-bold">
+                    <%= (lossChart[0] / 1000)*100 %>%
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+    const labels = [
+        'India',
+        'Oman',
+        'US',
+    ];
+
+    Chart.defaults.color = '#fff';
+
+
+
+    const lossChartData = {
+        labels: labels,
+        datasets: [{
+            label: 'Loss Chart',
+            backgroundColor: ['#0b90c4', '#e25353', '#ffeaa8'],
+            data: [<%= lossChart %>],
+        }]
+    };
+
+    const lossChartConfig = {
+        type: 'pie',
+        data: lossChartData,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+            }
+        },
+    };
+
+    const lossChart = new Chart(
+        document.getElementById('lossChart'),
+        lossChartConfig
+    );
+
+
+
+
+    const growthChartData = {
+        labels: labels,
+        datasets: [{
+            label: 'Growth Chart',
+            backgroundColor: ['#0b90c4', '#e25353', '#ffeaa8'],
+            data: [<%= growthChart %>],
+            borderWidth: 2,
+            borderColor: '#fff'
+        }]
+    };
+
+    const growthChartConfig = {
+        type: 'bar',
+        data: growthChartData,
+        options: {
+            responsive: false,
+            plugins: {
+                legend: false,
+            },
+            aspectRatio: 1
+        },
+    };
+
+    const growthChart = new Chart(
+        document.getElementById('growthChart'),
+        growthChartConfig
+    );
+
+
+</script>
