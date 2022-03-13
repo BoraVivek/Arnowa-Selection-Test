@@ -19,9 +19,6 @@ npm install
 - tailwindcss : Used for Styling the application
 
 
-**Note** : Due to lack of time, mobile responsiveness is not added to the application.
-
-
 ### Live Demo:
 
 [Arnowa Selection Test Demo](https://arnowa-vivek.herokuapp.com/)
