@@ -1,18 +1,18 @@
 const express = require("express");
-
 const router = express.Router();
+const homeController = require("../controllers/homeController");
 
-router.get("/", function (req, res) {
-    res.render("homepage", {
-        title: "Homepage"
-    })
-});
+router.get("/", homeController.homePage);
 
-router.get("/login", function (req, res) {
-    res.render("login", {
-        title: "Login"
+router.get("/login", homeController.login);
+
+router.get("/register", function (req, res) {
+    res.render("register", {
+        title: "Register"
     });
 })
+
+
 
 
 
