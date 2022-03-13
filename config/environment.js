@@ -9,7 +9,7 @@ const production = {
     name: 'production',
     db: process.env.ARNOWA_DB,
     session_cookie_key: process.env.ARNOWA_SESSION_KEY,
-    port: process.env.port,
+    port: process.env.PORT,
 }
 
 module.exports = eval(process.env.ARNOWA_ENVIRONMENT) == undefined ? development : eval(process.env.ARNOWA_ENVIRONMENT);
