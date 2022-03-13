@@ -9,14 +9,24 @@ exports.dashboard = async function (req, res) {
     let growthChart = chartData.filter((data) => {
         return data.type === 'growth';
     }).map((data) => {
-        return data.value;
+        return {
+            country: data.country,
+            value: data.value,
+        };
     });
 
     let lossChart = chartData.filter((data) => {
         return data.type === 'loss';
     }).map((data) => {
-        return data.value;
+        return {
+            country: data.country,
+            value: data.value,
+        };
     });
+
+    console.log(growthChart.map((data) => {
+        return data.country;
+    }))
 
     return res.render("dashboard", {
         title: "User Dashboard",

@@ -11,7 +11,7 @@
                 <div class="text-2xl">Growth</div>
 
                 <div class="percentage text-green-400 text-5xl font-bold">
-                    <%= (growthChart[0] / 1000)*100 %>%
+                    <%= (growthChart[0].value / 1000)*100 %>%
                 </div>
             </div>
 
@@ -21,7 +21,7 @@
                 <div class="text-2xl">Loss</div>
 
                 <div class="percentage text-red-400 text-5xl font-bold">
-                    <%= (lossChart[0] / 1000)*100 %>%
+                    <%= (lossChart[0].value / 1000)*100 %>%
                 </div>
             </div>
         </div>
@@ -34,10 +34,16 @@
 
 
 <script>
-    const labels = [
-        'India',
-        'Oman',
-        'US',
+    const growthLabels = [
+        "<%= growthChart[0].country %>",
+        "<%= growthChart[1].country %>",
+        "<%= growthChart[2].country %>",
+    ];
+
+    const lossLabels = [
+        "<%= lossChart[0].country %>",
+        "<%= lossChart[1].country %>",
+        "<%= lossChart[2].country %>",
     ];
 
     Chart.defaults.color = '#fff';
@@ -45,11 +51,13 @@
 
 
     const lossChartData = {
-        labels: labels,
+        labels: lossLabels,
         datasets: [{
             label: 'Loss Chart',
             backgroundColor: ['#0b90c4', '#e25353', '#ffeaa8'],
-            data: [<%= lossChart %>],
+            data: [<%= lossChart.map((data) => {
+                return data.value;
+            }) %>],
         }]
     };
 
@@ -75,11 +83,13 @@
 
 
     const growthChartData = {
-        labels: labels,
+        labels: growthLabels,
         datasets: [{
             label: 'Growth Chart',
             backgroundColor: ['#0b90c4', '#e25353', '#ffeaa8'],
-            data: [<%= growthChart %>],
+            data: [<%= growthChart.map((data) => {
+                return data.value;
+            }) %>],
             borderWidth: 2,
             borderColor: '#fff'
         }]

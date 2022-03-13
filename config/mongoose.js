@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/arnowa");
+//Loading Environment File
+const env = require('../config/environment');
+
+mongoose.connect(`${env.db}`);
 
 let db = mongoose.connection;
 
