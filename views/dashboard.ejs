@@ -11,7 +11,7 @@
                 <div class="text-2xl">Growth</div>
 
                 <div class="percentage text-green-400 text-5xl font-bold">
-                    <%= (growthChart[0].value / 1000)*100 %>%
+                    <%= Math.round((growthChart[0].value / 1000)*100) %>%
                 </div>
             </div>
 
@@ -21,7 +21,7 @@
                 <div class="text-2xl">Loss</div>
 
                 <div class="percentage text-red-400 text-5xl font-bold">
-                    <%= (lossChart[0].value / 1000)*100 %>%
+                    <%= Math.round((lossChart[0].value / 1000)*100) %>%
                 </div>
             </div>
         </div>
