@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .container{
-    min-height: calc(100vh - 15vh);
+    min-height: calc(100vh - 25vh);
     height: auto;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .homepage-container{
-    @apply mt-10 md:w-10/12
+    @apply mt-10 md:w-10/12 m-auto
 }
 
 .dashboard-container{

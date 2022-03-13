@@ -457,6 +457,9 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 1536px;
   }
 }
+.bottom-0 {
+  bottom: 0px;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -470,14 +473,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-5 {
   margin-bottom: 1.25rem;
 }
-.mt-4 {
-  margin-top: 1rem;
-}
 .mt-3 {
   margin-top: 0.75rem;
-}
-.mt-7 {
-  margin-top: 1.75rem;
 }
 .mt-10 {
   margin-top: 2.5rem;
@@ -655,7 +652,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .container{
-    min-height: calc(100vh - 15vh);
+    min-height: calc(100vh - 25vh);
     height: auto;
 }
 
@@ -800,6 +797,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .homepage-container {
+  margin: auto;
   margin-top: 2.5rem;
 }
 
