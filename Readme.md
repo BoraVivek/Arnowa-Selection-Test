@@ -26,6 +26,10 @@ npm install
 
 [Arnowa Selection Test Demo](https://arnowa-vivek.herokuapp.com/)
 
+#### Demo Login Details : 
+`Email:` `vb8527@gmail.com`
+`Password:` `vivek`
+
 ### Run Project:
 
 `npm start` 
