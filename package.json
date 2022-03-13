@@ -1,0 +1,14 @@
+{
+  "name": "arnowa",
+  "version": "1.0.0",
+  "description": "Arnowa Recruitment Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vivek Bora",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
