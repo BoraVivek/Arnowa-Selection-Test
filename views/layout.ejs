@@ -6,14 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <%= title %>
+        <%= title -%>
     </title>
 
     <link rel="stylesheet" href="/css/style.css">
+    <%- style -%>
 </head>
 
-<body>
-    <%- body %>
+<body class="bg-zinc-200">
+
+    <%- include("_header") -%>
+
+        <div class="container w-10/12 mx-auto">
+            <%- body -%>
+        </div>
+
+        <%- include("_footer") -%>
+            <%- script -%>
 </body>
 
 </html>

@@ -7,6 +7,15 @@ router.get("/", function (req, res) {
         title: "Homepage"
     })
 });
+
+router.get("/login", function (req, res) {
+    res.render("login", {
+        title: "Login"
+    });
+})
+
+
+
 router.use("/users", require("./users"));
 
 module.exports = router;
