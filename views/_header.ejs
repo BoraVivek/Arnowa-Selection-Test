@@ -5,13 +5,13 @@
         </h2>
         <nav>
             <ul class="flex gap-8 text-white">
-                <li class="<%= active == "home" ? "activeMenu" : '' %>">
+                <li class="<%= active === "home" ? "activeMenu" : '' %>">
                     <a href="/">Home</a>
                 </li>
-                <li class="<%= active == "login" ? "activeMenu" : '' %></li>">
+                <li class="<%= active === "login" ? "activeMenu" : '' %>">
                 <a href="/login">Login</a>
                 </li>
-                <li class="<%= active == "register" ? "activeMenu" : '' %></li>">
+                <li class="<%= active === "register" ? "activeMenu" : '' %>">
                 <a href="/register">Register</a>
                 </li>
             </ul>

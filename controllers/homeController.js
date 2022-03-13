@@ -11,3 +11,10 @@ exports.login = function (req, res) {
         active: "login"
     })
 }
+
+exports.register = function (req, res) {
+    return res.render("register", {
+        title: "Arnowa | Register",
+        active: "register"
+    })
+}
