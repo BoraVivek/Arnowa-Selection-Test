@@ -24,10 +24,6 @@ exports.dashboard = async function (req, res) {
         };
     });
 
-    console.log(growthChart.map((data) => {
-        return data.country;
-    }))
-
     return res.render("dashboard", {
         title: "User Dashboard",
         active: "dashboard",
