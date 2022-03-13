@@ -9,10 +9,12 @@ passport.use(new LocalStartegy({
 }, function(req, email, password, done){
     User.findOne({email: email}, function(err, user){
         if(err){
+            req.flash("error", "Error with Authentication System");
             return done(err);
         }
 
         if(!user || !bcrypt.compareSync(password, user.password)){
+            req.flash("error","Email/Password don't match")
             return done(null, false);
         }
 

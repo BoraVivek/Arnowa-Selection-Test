@@ -44,7 +44,7 @@
 }
 
 .dashboard-container{
-    @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-10/12
+    @apply flex mt-10
 }
 
 .activeMenu{

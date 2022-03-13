@@ -6,6 +6,10 @@
         <span class="text-center text-md text-slate-200">
             Login to explore more
         </span>
+
+        <div class="text-center text-md bg-red-600 text-white mt-5 mb-5">
+            <%= flash.error %>
+        </div>
     </div>
 
     <form action="/users/create-session" class="input-form flex flex-col gap-5" method="post">
